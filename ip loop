@@ -1,0 +1,17 @@
+#ip config loopback
+import netmiko
+devicel = {
+'device_type': 'cisco_ios',
+'ip': '192.168.1.1',
+'username"
+"cisco'
+'password': 'cisco secret'.
+'cisco'
+}
+
+net_connect = netmiko.ConnectHandler(**devicel)
+#Entering enable mode
+net_connect.enable()
+config_commands = ['int loop 0','ip address 10.1.1.1 255.255.255.0', 'no shut']
+output = net_connect.send_config(config_commands)
+net_connect.disconnect ()
